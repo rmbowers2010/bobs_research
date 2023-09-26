@@ -3,3 +3,11 @@ body {
     background: lightslategray;
     text-align: left;
 }
+
+h1 {
+    margin: 20px 0; /* This adds 20px of space above and below the h1 element */
+}
+
+p {
+    padding: 10px 0; /* This adds 10px of space above and below the p element within its border */
+}
