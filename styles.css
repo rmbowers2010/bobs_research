@@ -1,13 +1,13 @@
 body {
     /* margin: 0; */
-    background: lightslategray;
+    background: papayawhip;
     /* text-align: left; */
 }
 
-.one-tab {
-    text-indent: 20px; 
+.indent-2em {
+    text-indent: 2em;
 }
 
-.two-tab {
-    text-indent: 40px; 
+.indent-4em {
+    text-indent: 4em;
 }
