@@ -4,10 +4,10 @@ body {
     text-align: left;
 }
 
-h1 {
-    margin: 20px 0; /* This adds 20px of space above and below the h1 element */
+.one-tab {
+    text-indent: 2em; /* Adjust as per your needs */
 }
 
-p {
-    padding: 10px 0; /* This adds 10px of space above and below the p element within its border */
+.two-tab {
+    text-indent: 4em; /* Adjust as per your needs */
 }
