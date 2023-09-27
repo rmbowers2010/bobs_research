@@ -4,10 +4,10 @@ body {
     /* text-align: left; */
 }
 
-.indent-2em {
-    text-indent: 2em;
+.one-tab {
+    text-indent: 20px; 
 }
 
-.indent-4em {
-    text-indent: 4em;
+.two-tab {
+    text-indent: 40px; 
 }
