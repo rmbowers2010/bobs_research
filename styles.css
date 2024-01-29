@@ -1,13 +1,20 @@
 .container {
     display: flex;
-    align-items: flex-start; /* Align items to the start of the flex container */
-}
-
-.text-block, .image-block {
-    flex: 1; /* Give text and image equal width in the flex container */
-}
-
-.image-block img {
-    max-width: 100%; /* Ensures image does not overflow its container */
-    height: auto; /* Maintains the image's aspect ratio */
-}
+    .container {
+        display: flex;
+        flex-wrap: nowrap; /* Prevents the flex items from wrapping */
+    }
+    
+    .text-block {
+        flex: 0 0 50%; /* Assigns a fixed portion of the container's width to the text block */
+        padding-right: 20px; /* Adds some space between the text and the image */
+    }
+    
+    .image-block {
+        flex: 0 0 50%; /* Assigns a fixed portion of the container's width to the image block */
+    }
+    
+    .image-block img {
+        width: 100%; /* Sets the image to take the full width of its container */
+        height: auto; /* Maintains the image's aspect ratio */
+    }
