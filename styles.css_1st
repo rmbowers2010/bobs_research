@@ -1,0 +1,13 @@
+body {
+    /* margin: 0; */
+    background: aliceblue;
+    /* text-align: left; */
+}
+
+.one-tab {
+    text-indent: 20px; 
+}
+
+.two-tab {
+    text-indent: 40px; 
+}

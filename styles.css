@@ -1,13 +1,14 @@
-body {
-    /* margin: 0; */
-    background: aliceblue;
-    /* text-align: left; */
+.container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-around; /* Spreads out the items evenly */
 }
 
-.one-tab {
-    text-indent: 20px; 
+.text-block, .image-block {
+    flex: 1; /* Both text and image blocks will take equal width */
 }
 
-.two-tab {
-    text-indent: 40px; 
+.image-block img {
+    max-width: 100%; /* Makes sure image does not overflow its container */
+    height: auto; /* Keeps the image aspect ratio intact */
 }
