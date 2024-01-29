@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Text and Image Side by Side</title>
 </head>
 <body>
 
-<div class="container">
-    <div class="text-block">
+<div style="display: flex; align-items: flex-start; width: 100%;">
+    <div style="width: 50%;">
         <p>Line 1 of text</p>
         <p>Line 2 of text</p>
         <p>Line 3 of text</p>
@@ -15,8 +15,8 @@
         <p>Line 6 of text</p>
         <p>Line 7 of text</p>
     </div>
-    <div class="image-block">
-        <img src="path/to/your/image.jpg" alt="Your Image">
+    <div style="width: 50%;">
+        <img src="path/to/your/image.jpg" alt="Your Image" style="width: 100%; height: auto;">
     </div>
 </div>
 
