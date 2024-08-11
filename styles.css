@@ -31,7 +31,7 @@ body {
     width: 50%;
 }
 
-/* Making the top and bottom images significantly smaller */
+/* Making the top image significantly smaller */
 .rotated-image {
     transform: rotate(45deg);
     width: 5%; /* 5% of the container's width */
@@ -39,15 +39,17 @@ body {
     margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
 }
 
+/* Replacing the PDF with IMG_0569.bmp */
+.middle-image {
+    width: 90%; /* 90% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adds some space above the image */
+    margin-bottom: 20px; /* Adds some space below the image */
+}
+
+/* Making the bottom image smaller */
 .bottom-image {
     width: 10%; /* 10% of the container's width */
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Adds some space between the bottom image and the content above */
-}
-
-/* Adjusting the PDF to fit horizontally while reducing height */
-.pdf-frame {
-    width: 90%; /* 90% of the container's width */
-    height: 600px; /* Reducing height to avoid cutoff */
-    border: none;
 }
