@@ -3,19 +3,16 @@ body {
 }
 
 .one-tab,
-.two-tab,
-p {
-    margin: 0; /* Remove default margins from all paragraphs */
-    padding: 0; /* Remove default padding from all paragraphs */
-    line-height: 1.2; /* Adjust the line height for closer spacing */
-}
-
-.one-tab {
-    text-indent: 20px; 
-}
-
 .two-tab {
-    text-indent: 40px; 
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    line-height: 1.2; /* Control line height to reduce spacing between lines */
+}
+
+p {
+    margin: 0; /* Remove all margins from paragraph tags */
+    padding: 0; /* Remove all padding from paragraph tags */
+    line-height: 1.2; /* Control line height to reduce spacing between lines */
 }
 
 .container {
