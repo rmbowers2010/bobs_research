@@ -58,10 +58,10 @@ body {
     margin-right: 0; /* Remove any margin on the right */
 }
 
-.small-image {
-    width: 60%; /* Make the small image smaller */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: auto; /* Push the image to the bottom of the left section */
-    margin-bottom: 10px; /* Space between the image and the bottom ribbon */
-    align-self: flex-start; /* Align the small image to the left side within the left section */
+/*.small-image {*/
+    /*width: 60%; /* Make the small image smaller */*/
+    /*height: auto; /* Maintain aspect ratio */*/
+    /*margin-top: auto; /* Push the image to the bottom of the left section */*/
+    /*margin-bottom: 10px; /* Space between the image and the bottom ribbon */*/
+    /*align-self: flex-start; /* Align the small image to the left side within the left section */*/*/
 }
