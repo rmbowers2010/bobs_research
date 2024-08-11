@@ -49,7 +49,7 @@ body {
 
 /* Making the bottom image smaller */
 .bottom-image {
-    width: 10%; /* 10% of the container's width */
+    width: 20%; /* 10% of the container's width */
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Adds some space between the bottom image and the content above */
 }
