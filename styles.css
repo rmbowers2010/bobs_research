@@ -39,7 +39,7 @@ a {
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: top left; /* Align the image to the top left */
     background-size: contain; /* Scale the image so it fits within the height */
-    margin-bottom: 20px; /* Buffer space between the ribbon and the content below */
+    margin-bottom: 0px; /* Buffer space between the ribbon and the content below */
 }
 
 .main-content {
