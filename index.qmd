@@ -1,7 +1,0 @@
----
-title: "Home"
----
-
-# Welcome to Bob's Research
-
-This is the homepage of my research website.
