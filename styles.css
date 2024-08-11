@@ -50,5 +50,5 @@ body {
     width: 100%; /* Ensure the small image fits the left section */
     height: auto; /* Maintain aspect ratio */
     margin-top: auto; /* Push the image to the bottom of the left section */
-    margin-bottom: 20px; /* Space between the image and the bottom ribbon */
+    margin-bottom: 60px; /* Add more space between the image and the bottom ribbon */
 }
