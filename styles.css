@@ -32,9 +32,9 @@ body {
 }
 
 .rotated-image {
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     width: 75%; /* 3/4 of the page */
-    height: auto;
+    height: calc(7.5%); /* 1/10 of the original width-based height */
     margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
 }
 
