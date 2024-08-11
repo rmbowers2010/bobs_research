@@ -35,11 +35,10 @@ body {
 .ribbon {
     width: 100%; /* Full width of the container */
     height: 60px; /* Adjust height as needed */
-    background-image: url('images/surfboard.png'); /* Replace with your image path */
+    background-image: url('images/surfboard.png'); /* Path to your image */
     background-repeat: repeat-x; /* Repeat the image horizontally */
-    background-size: auto 100%; /* Keep the original height and adjust width accordingly */
-    transform: rotate(45deg); /* Rotate the entire ribbon */
-    transform-origin: center; /* Ensure rotation happens from the center */
+    background-size: contain; /* Ensure the image scales to fit within the height */
+    /* transform: rotate(45deg); */ /* Temporarily comment out rotation for troubleshooting */
     margin-bottom: 20px; /* Adds some space between the ribbon and the content below */
 }
 
