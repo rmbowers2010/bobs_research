@@ -26,24 +26,24 @@ body {
 .main-content {
     display: flex;
     width: 100%;
+}
+
+.left-section,
+.right-section {
+    width: 50%; /* Make left and right sections equal in width */
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .left-section {
-    width: 30%; /* Allocate space for the left section */
     padding: 20px; /* Add some padding for spacing */
 }
 
-.middle-section {
-    width: 70%; /* Allocate space for the middle section */
-    display: flex;
-    justify-content: flex-end; /* Align the image to the right */
-    align-items: center; /* Vertically center the image */
-}
-
 .middle-image {
+    width: 100%; /* Make sure the image takes up the full width of the right section */
     height: calc(100vh - 140px); /* Adjust height to span between ribbons */
-    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the section without distortion */
 }
 
 .small-image {
