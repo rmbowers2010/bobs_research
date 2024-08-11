@@ -4,31 +4,28 @@ body {
 
 .one-tab,
 .two-tab {
-    margin: 0; /* Remove all margins */
-    padding: 0; /* Remove all padding */
-    line-height: 1; /* Control line height to reduce spacing between lines */
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Minimal line-height */
 }
 
 h1.two-tab {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Reduce line height */
-    margin-bottom: 5px; /* Small space between the heading and next element */
+    line-height: 1; /* Minimal line-height */
 }
 
 p.one-tab {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Reduce line height */
-    margin-bottom: 5px; /* Small space between paragraphs */
+    line-height: 1; /* Minimal line-height */
 }
 
 a {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Reduce line height */
-    margin-bottom: 5px; /* Small space below the link */
-    display: block; /* Ensure the link behaves like a block element */
+    line-height: 1; /* Minimal line-height */
+    display: block; /* Ensure link behaves like a block element */
 }
 
 .container {
