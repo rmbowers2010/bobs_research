@@ -35,13 +35,13 @@ body {
 .rotated-image {
     transform: rotate(45deg);
     width: 75%; /* 3/4 of the page */
-    height: 1%; /* 1/10th of its original height */
+    height: 10%; /* 1/10th of its original height */
     margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
 }
 
 .bottom-image {
     width: 100%;
-    height: 1%; /* 1/10th of its original height */
+    height: 10%; /* 1/10th of its original height */
     margin-top: 20px; /* Adds some space between the bottom image and the content above */
 }
 
