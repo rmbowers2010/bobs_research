@@ -42,18 +42,24 @@ body {
     margin-bottom: 20px; /* Adds some space between the ribbon and the content below */
 }
 
-/* Replacing the PDF with IMG_0569.bmp */
-.middle-image {
-    width: 90%; /* 90% of the container's width */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 20px; /* Adds some space above the image */
-    margin-bottom: 20px; /* Adds some space below the image */
+/* Bottom section to hold the small and middle images side by side */
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 20px; /* Adds some space between the images and the bottom ribbon */
 }
 
-/* Small image above the bottom ribbon */
+/* Small image positioned to the left of the middle image */
 .small-image {
-    width: 50%; /* Keep the previous size */
+    width: 20%; /* Small size relative to the container */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 60px; /* Add more space between the links and the image */
-    margin-bottom: 20px; /* Add space between the image and the bottom ribbon */
+    margin-right: 20px; /* Space between the small image and middle image */
+}
+
+/* Middle image positioned to the right of the small image */
+.middle-image {
+    width: 70%; /* Larger size relative to the container */
+    height: auto; /* Maintain aspect ratio */
 }
