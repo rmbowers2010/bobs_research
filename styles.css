@@ -3,11 +3,15 @@ body {
 }
 
 .one-tab {
-    text-indent: 20px; 
+    text-indent: 20px;
+    margin: 5px 0; /* Reduce the margin between paragraphs */
+    line-height: 1.2; /* Adjust the line height for closer spacing */
 }
 
 .two-tab {
-    text-indent: 40px; 
+    text-indent: 40px;
+    margin: 5px 0; /* Reduce the margin between paragraphs */
+    line-height: 1.2; /* Adjust the line height for closer spacing */
 }
 
 .container {
