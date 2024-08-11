@@ -62,9 +62,9 @@ a {
 
 .middle-image {
     float: right; /* Right-align the image */
-    width: auto; /* Let the width adjust based on the image's aspect ratio */
-    height: auto; /* Ensure the image maintains its natural height */
-    max-width: 100%; /* Make sure the image doesn't overflow the container */
-    margin-top: 0; /* Align the image with the top of the section */
-    margin-right: 0; /* Ensure the image is close to the right edge */
+    max-width: 80%; /* Make the image smaller (adjust this percentage as needed) */
+    max-height: 300px; /* Set a maximum height to make the image smaller */
+    object-fit: contain; /* Ensure the image fits within its container */
+    margin-right: 20px; /* Add buffer space on the right */
+    margin-bottom: 20px; /* Add buffer space on the bottom */
 }
