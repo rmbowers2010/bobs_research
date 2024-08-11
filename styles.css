@@ -2,16 +2,20 @@ body {
     background: aliceblue;
 }
 
-.one-tab {
-    text-indent: 20px;
-    margin: 5px 0; /* Reduce the margin between paragraphs */
+.one-tab,
+.two-tab,
+p {
+    margin: 0; /* Remove default margins from all paragraphs */
+    padding: 0; /* Remove default padding from all paragraphs */
     line-height: 1.2; /* Adjust the line height for closer spacing */
 }
 
+.one-tab {
+    text-indent: 20px; 
+}
+
 .two-tab {
-    text-indent: 40px;
-    margin: 5px 0; /* Reduce the margin between paragraphs */
-    line-height: 1.2; /* Adjust the line height for closer spacing */
+    text-indent: 40px; 
 }
 
 .container {
