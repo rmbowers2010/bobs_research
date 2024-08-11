@@ -28,7 +28,7 @@ body {
     display: flex;
     width: 100%;
     padding-left: 20px; /* Add padding to the main content to match the left section's padding */
-    padding-right: 20px; /* Add padding to ensure symmetry on both sides */
+    padding-right: 0; /* Remove padding on the right to move the middle image closer to the right margin */
 }
 
 .left-section,
@@ -55,13 +55,5 @@ body {
     object-fit: contain; /* Ensure the entire image is visible without cropping */
     margin-top: 20px; /* Buffer space between the top ribbon and the middle image */
     margin-bottom: 20px; /* Buffer space between the bottom ribbon and the middle image */
-    margin-right: 0; /* Remove any margin on the right */
-}
-
-/*.small-image {*/
-    /*width: 60%; /* Make the small image smaller */*/
-    /*height: auto; /* Maintain aspect ratio */*/
-    /*margin-top: auto; /* Push the image to the bottom of the left section */*/
-    /*margin-bottom: 10px; /* Space between the image and the bottom ribbon */*/
-    /*align-self: flex-start; /* Align the small image to the left side within the left section */*/*/
+    margin-right: 0; /* Ensure the image is close to the right edge */
 }
