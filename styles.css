@@ -46,13 +46,13 @@ body {
     height: calc(100vh - 180px); /* Adjust height to span between ribbons with buffer space */
     object-fit: cover; /* Ensure the image covers the section without distortion */
     margin-top: 20px; /* Buffer space between the top ribbon and the middle image */
-    margin-bottom: 20px; /* Buffer space between the bottom ribbon and the middle image */
+    margin-bottom: 10px; /* Buffer space between the bottom ribbon and the middle image */
 }
 
 .small-image {
-    width: 70%; /* Make the small image smaller */
+    width: 35%; /* Make the small image smaller */
     height: auto; /* Maintain aspect ratio */
     margin-top: auto; /* Push the image to the bottom of the left section */
-    margin-bottom: 20px; /* Space between the image and the bottom ribbon */
+    margin-bottom: 10px; /* Space between the image and the bottom ribbon */
     align-self: flex-end; /* Align the small image to the right side within the left section */
 }
