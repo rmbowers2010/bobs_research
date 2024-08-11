@@ -5,32 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .left-section {
+            width: 50%;
+        }
+
+        .right-section {
+            width: 50%;
+        }
+
+        .rotated-image {
+            transform: rotate(90deg);
+            width: 75%; /* 3/4 of the page */
+            height: auto;
+            margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
+        }
+
+        .bottom-image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px; /* Adds some space between the bottom image and the content above */
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
-<div style="display: flex; align-items: flex-start; width: 100%;">
-    <div style="width: 50%;">
-        <!-- Use the class name defined in the CSS file -->
-        <h1 class="two-tab">bobs_stuff</h1>
-        <!-- <p class="one-tab">My first attempt at creating a website</p> -->
-        <p class="one-tab">Link to IMG metadata explorer Shiny App</p>
-        <!--
-            Works for now, but since img_explorer.html and genome_stats_explorer.html
-            are in bobs_research, chat said that you do not need /bobs_research in front
-            though this was working before. Had to remove path from genome_stats_explorer.html
-            to get this link to work again. When have time, remove /bobs_research from img_explorer.html
-            to see if still works.
-        -->
-        <p class="one-tab">
-            <a href="img_explorer.html">IMG metadata explorer</a>
-        <p class="one-tab">Link to Genome statistics explorer Shiny App</p>
-        <p class="one-tab">
-            <a href="genome_stats_explorer.html">Genome statistics explorer</a>
+<div class="container">
+    <!-- Top section with rotated image -->
+    <img src="images/surfboard.png" alt="Rotated Surfboard" class="rotated-image">
 
+    <!-- Middle section with content and PDF -->
+    <div class="top-section">
+        <div class="left-section">
+            <h1 class="two-tab">bobs_stuff</h1>
+            <p class="one-tab">Link to IMG metadata explorer Shiny App</p>
+            <p class="one-tab">
+                <a href="img_explorer.html">IMG metadata explorer</a>
+            </p>
+            <p class="one-tab">Link to Genome statistics explorer Shiny App</p>
+            <p class="one-tab">
+                <a href="genome_stats_explorer.html">Genome statistics explorer</a>
+            </p>
+        </div>
+        <div class="right-section">
+            <iframe src="images/mt_goddard.pdf" class="pdf-frame"></iframe>
+        </div>
     </div>
-    <div style="width: 50%;">
-        <img src="IMG_0569.bmp" alt="Your Image" style="width: 100%; height: auto;">
-    </div>
+
+    <!-- Bottom section with full-width image -->
+    <img src="images/IMG_0569.bmp" alt="Bottom Image" class="bottom-image">
 </div>
 
 </body>
