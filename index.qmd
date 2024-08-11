@@ -1,7 +1,7 @@
 ---
-title: "Welcome to My Quarto Site"
+title: "Home"
 ---
 
-# Hello World
+# Welcome to Bob's Research
 
-This is a Quarto site hosted on GitHub Pages.
+This is the homepage of my research website.
