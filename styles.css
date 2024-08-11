@@ -49,16 +49,11 @@ a {
     padding-right: 0; /* Remove padding on the right to move the middle image closer to the right margin */
 }
 
-.left-section,
-.right-section {
-    width: 50%; /* Make left and right sections equal in width */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .left-section {
+    width: 50%; /* Keep the left section 50% width */
+    display: block; /* Remove flex to prevent stretching */
     padding-right: 0; /* Reset any additional padding */
+    margin-top: 0; /* Ensure the text block stays at the top */
 }
 
 .right-section {
