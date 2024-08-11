@@ -64,6 +64,32 @@ algolia:
   files_to_exclude:
     - _posts/2017-11-28-post-exclude-search.md
 
+# Sidebar
+sidebar:
+  # Enable or disable the sidebar
+  enabled: true
+
+  # Add a profile picture
+  avatar: "/assets/images/bob_sweaty_mustache.jpg"
+
+  # Sidebar title
+  title: "About Robert"
+
+  # Bio
+  bio: "I'm Robert Bowers, a microbial ecologist and bioinformatician."
+
+  # Social media links
+  social_links:
+    - title: "Email"
+      url: "mailto:rmbowers2010@gmail.com"
+      icon: "fas fa-envelope"
+    - title: "Email"
+      url: "mailto:rmbowers@lbl.gov"
+      icon: "fas fa-envelope"
+    - title: "Twitter"
+      url: "https://twitter.com/yourhandle"
+      icon: "fab fa-twitter"
+
 # SEO Related
 google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" # Replace this with your ID, or delete
 bing_site_verification   :
