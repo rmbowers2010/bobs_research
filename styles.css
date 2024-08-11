@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     background: aliceblue;
 }
@@ -28,6 +29,7 @@ a {
     margin-bottom: 10px; /* Add space below each link */
 }
 
+/* Container and Layout */
 .container {
     width: 100%;
 }
@@ -60,18 +62,25 @@ a {
     padding-left: 0; /* Reset any additional padding */
 }
 
+/* Default styles */
 .right-image {
-    float: right; /* Right-align the image */
-    width: 50%; /* Reduce the image size to 50% of its current size */
-    height: auto; /* Ensure the image maintains its natural height */
-    max-width: 50%; /* Ensure the image doesn't overflow the container */
-    margin: auto; /* Center the image vertically within the available space */
-    display: block; /* Make sure the image is treated as a block element */
-    margin-top: 20px; /* Adjust top margin to center it between ribbons */
-    margin-bottom: 20px; /* Adjust bottom margin to center it between ribbons */
+    float: right;
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    display: block;
+    max-width: 100%;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .right-image {
+        width: 50%; /* Adjust size for smaller screens */
+        margin: 10px; /* Reduce margin for smaller screens */
+    }
+}
 
+/* Publications List */
 ul.one-tab {
     list-style-type: none; /* Remove default list styling */
     padding: 0;
