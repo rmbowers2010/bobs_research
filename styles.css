@@ -46,7 +46,7 @@ a {
     display: flex;
     width: 100%;
     padding-left: 20px; /* Add padding to the main content to match the left section's padding */
-    padding-right: 0; /* Remove padding on the right to move the middle image closer to the right margin */
+    padding-right: 0; /* Remove padding on the right to move the right image closer to the right margin */
 }
 
 .left-section {
@@ -60,11 +60,13 @@ a {
     padding-left: 0; /* Reset any additional padding */
 }
 
-.middle-image {
+.right-image {
     float: right; /* Right-align the image */
-    width: auto; /* Let the width adjust based on the image's aspect ratio */
+    width: 50%; /* Reduce the image size to 50% of its current size */
     height: auto; /* Ensure the image maintains its natural height */
-    max-width: 100%; /* Make sure the image doesn't overflow the container */
-    margin-top: 0; /* Align the image with the top of the section */
-    margin-right: 0; /* Ensure the image is close to the right edge */
+    max-width: 50%; /* Ensure the image doesn't overflow the container */
+    margin: auto; /* Center the image vertically within the available space */
+    display: block; /* Make sure the image is treated as a block element */
+    margin-top: 20px; /* Adjust top margin to center it between ribbons */
+    margin-bottom: 20px; /* Adjust bottom margin to center it between ribbons */
 }
