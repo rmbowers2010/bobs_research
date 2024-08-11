@@ -21,6 +21,7 @@ body {
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: top left; /* Align the image to the top left */
     background-size: contain; /* Scale the image so it fits within the height */
+    margin-bottom: 20px; /* Buffer space between the ribbon and the content below */
 }
 
 .main-content {
@@ -42,13 +43,16 @@ body {
 
 .middle-image {
     width: 100%; /* Make sure the image takes up the full width of the right section */
-    height: calc(100vh - 140px); /* Adjust height to span between ribbons */
+    height: calc(100vh - 180px); /* Adjust height to span between ribbons with buffer space */
     object-fit: cover; /* Ensure the image covers the section without distortion */
+    margin-top: 20px; /* Buffer space between the top ribbon and the middle image */
+    margin-bottom: 20px; /* Buffer space between the bottom ribbon and the middle image */
 }
 
 .small-image {
-    width: 100%; /* Ensure the small image fits the left section */
+    width: 70%; /* Make the small image smaller */
     height: auto; /* Maintain aspect ratio */
     margin-top: auto; /* Push the image to the bottom of the left section */
-    margin-bottom: 60px; /* Add more space between the image and the bottom ribbon */
+    margin-bottom: 20px; /* Space between the image and the bottom ribbon */
+    align-self: flex-end; /* Align the small image to the right side within the left section */
 }
