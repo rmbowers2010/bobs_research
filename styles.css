@@ -31,12 +31,16 @@ body {
     width: 50%;
 }
 
-/* Making the top image significantly smaller */
-.rotated-image {
-    transform: rotate(45deg);
-    width: 5%; /* 5% of the container's width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
+/* Creating a repeating ribbon with the rotated image */
+.ribbon {
+    width: 100%; /* Full width of the container */
+    height: 60px; /* Adjust height as needed */
+    background-image: url('images/surfboard.png'); /* Replace with your image path */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-size: auto 100%; /* Keep the original height and adjust width accordingly */
+    transform: rotate(45deg); /* Rotate the entire ribbon */
+    transform-origin: center; /* Ensure rotation happens from the center */
+    margin-bottom: 20px; /* Adds some space between the ribbon and the content below */
 }
 
 /* Replacing the PDF with IMG_0569.bmp */
@@ -49,7 +53,7 @@ body {
 
 /* Making the bottom image smaller */
 .bottom-image {
-    width: 20%; /* 10% of the container's width */
+    width: 10%; /* 10% of the container's width */
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Adds some space between the bottom image and the content above */
 }
