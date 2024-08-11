@@ -42,11 +42,12 @@ body {
 }
 
 .middle-image {
-    width: 100%; /* Ensure the image takes up the full width of the right section */
+    width: auto; /* Let the width adjust based on the image's aspect ratio */
     height: calc(100vh - 140px); /* Adjust height to span between ribbons with buffer space */
     object-fit: contain; /* Ensure the entire image is visible without cropping */
     margin-top: 20px; /* Buffer space between the top ribbon and the middle image */
     margin-bottom: 20px; /* Buffer space between the bottom ribbon and the middle image */
+    align-self: flex-end; /* Align the middle image to the right side of the right section */
 }
 
 .small-image {
