@@ -58,13 +58,13 @@ a {
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
     padding-left: 0; /* Reset any additional padding */
+    text-align: right; /* Ensure text in right section aligns right */
 }
 
 .middle-image {
-    float: right; /* Right-align the image */
-    max-width: 80%; /* Make the image smaller (adjust this percentage as needed) */
-    max-height: 300px; /* Set a maximum height to make the image smaller */
+    width: 200px; /* Set specific width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Buffer space on the right */
+    margin-bottom: 20px; /* Buffer space on the bottom */
     object-fit: contain; /* Ensure the image fits within its container */
-    margin-right: 20px; /* Add buffer space on the right */
-    margin-bottom: 20px; /* Add buffer space on the bottom */
 }
