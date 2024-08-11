@@ -42,8 +42,8 @@ body {
 }
 
 .middle-image {
-    width: 100%; /* Make sure the image takes up the full width of the right section */
-    height: calc(100vh - 180px); /* Adjust height to span between ribbons with buffer space */
+    width: 60%; /* Make sure the image takes up the full width of the right section */
+    height: calc(100vh - 200px); /* Adjust height to span between ribbons with buffer space */
     object-fit: cover; /* Ensure the image covers the section without distortion */
     margin-top: 20px; /* Buffer space between the top ribbon and the middle image */
     margin-bottom: 10px; /* Buffer space between the bottom ribbon and the middle image */
