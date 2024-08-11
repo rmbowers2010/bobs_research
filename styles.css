@@ -6,28 +6,25 @@ body {
 .two-tab {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Minimal line-height */
+    line-height: 1.2; /* Minimal line-height with a bit of spacing */
 }
 
 h1.two-tab {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Minimal line-height */
-    margin-bottom: 10px; /* Add space below the header */
+    margin-bottom: 10px; /* Add a bit of space below the header */
 }
 
 p.one-tab {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Minimal line-height */
     margin-bottom: 10px; /* Add space between each paragraph */
 }
 
 a {
     margin: 0;
     padding: 0;
-    line-height: 1; /* Minimal line-height */
-    display: block; /* Ensure link behaves like a block element */
+    display: block;
     margin-bottom: 10px; /* Add space below each link */
 }
 
@@ -54,23 +51,20 @@ a {
 
 .left-section {
     width: 50%; /* Keep the left section 50% width */
-    display: block; /* Remove flex to prevent stretching */
     padding-right: 0; /* Reset any additional padding */
     margin-top: 0; /* Ensure the text block stays at the top */
 }
 
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
-    display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: flex-start; /* Align content to the top */
     padding-left: 0; /* Reset any additional padding */
 }
 
 .middle-image {
+    float: right; /* Right-align the image */
     width: auto; /* Let the width adjust based on the image's aspect ratio */
     height: auto; /* Ensure the image maintains its natural height */
     max-width: 100%; /* Make sure the image doesn't overflow the container */
+    margin-top: 0; /* Align the image with the top of the section */
     margin-right: 0; /* Ensure the image is close to the right edge */
-    align-self: flex-start; /* Align the image to the top of the right section */
 }
