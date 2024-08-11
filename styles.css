@@ -46,6 +46,13 @@ body {
 .middle-image {
     width: 90%; /* 90% of the container's width */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 30px; /* Adds some space above the image */
-    margin-bottom: 40px; /* Adds some space below the image */
+    margin-top: 20px; /* Adds some space above the image */
+    margin-bottom: 20px; /* Adds some space below the image */
+}
+
+/* Small image below the links */
+.small-image {
+    width: 80%; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adds some space between the image and the links above */
 }
