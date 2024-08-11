@@ -3,3 +3,7 @@ main:
     url: "/"
   - title: "About Me"
     url: "/bio/"
+  - title: "Research"
+    url: "/research/"
+  - title: "Contact"
+    url: "/contact/"

@@ -350,12 +350,14 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bundler (~> 2.5.17)
   github-pages
   jekyll-algolia
   jekyll-feed
   jekyll-gist
   jekyll-include-cache
   jekyll-paginate
+  jekyll-remote-theme
   jekyll-sitemap
   jemoji
   minimal-mistakes-jekyll
