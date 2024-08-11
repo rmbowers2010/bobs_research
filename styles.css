@@ -56,7 +56,7 @@ a {
 }
 
 .right-section {
-    width: 50%; /* Ensure the right section takes up half the width */
+    width: 25%; /* Ensure the right section takes up half the width */
     padding-left: 0; /* Reset any additional padding */
 }
 
@@ -66,6 +66,6 @@ a {
     height: auto; /* Ensure the image maintains its natural height */
     max-width: 60%; /* Make sure the image doesn't overflow the container */
     margin-top: 0; /* Align the image with the top of the section */
-    margin-right: 0; /* Ensure the image is close to the right edge */
+    margin-right: :; /* Ensure the image is close to the right edge */
 	margin-bottom: 20
 }
