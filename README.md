@@ -1,1 +1,0 @@
-# bobs_research
