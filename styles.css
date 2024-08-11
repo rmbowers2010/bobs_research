@@ -50,10 +50,10 @@ body {
     margin-bottom: 20px; /* Adds some space below the image */
 }
 
-/* Small image below the links */
+/* Small image above the bottom ribbon */
 .small-image {
     width: 50%; /* Make the image much smaller */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 20px; /* Add space between the links and the image */
-    margin-left: 10%; /* Indent the image slightly to match the text indent */
+    margin-top: 40px; /* Add more space between the last link and the image */
+    margin-bottom: 20px; /* Add space between the image and the bottom ribbon */
 }
