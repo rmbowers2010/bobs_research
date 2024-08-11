@@ -11,27 +11,9 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
 }
 
-.top-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.left-section {
-    width: 50%;
-}
-
-.right-section {
-    width: 50%;
-}
-
-/* Creating a repeating ribbon with the image */
 .ribbon {
     width: 100%; /* Full width of the container */
     height: 60px; /* Adjust height as needed */
@@ -39,27 +21,34 @@ body {
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: top left; /* Align the image to the top left */
     background-size: contain; /* Scale the image so it fits within the height */
-    margin-bottom: 20px; /* Adds some space between the ribbon and the content below */
 }
 
-/* Bottom section to hold the small and middle images side by side */
-.bottom-section {
+.main-content {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
     width: 100%;
-    margin-bottom: 20px; /* Adds some space between the images and the bottom ribbon */
+    justify-content: space-between;
 }
 
-/* Small image positioned to the left of the middle image */
-.small-image {
-    width: 20%; /* Small size relative to the container */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between the small image and middle image */
+.left-section {
+    width: 30%; /* Allocate space for the left section */
+    padding: 20px; /* Add some padding for spacing */
 }
 
-/* Middle image positioned to the right of the small image */
+.middle-section {
+    width: 70%; /* Allocate space for the middle section */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+    align-items: center; /* Vertically center the image */
+}
+
 .middle-image {
-    width: 70%; /* Larger size relative to the container */
+    height: calc(100vh - 140px); /* Adjust height to span between ribbons */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.small-image {
+    width: 100%; /* Ensure the small image fits the left section */
     height: auto; /* Maintain aspect ratio */
+    margin-top: auto; /* Push the image to the bottom of the left section */
+    margin-bottom: 20px; /* Space between the image and the bottom ribbon */
 }
