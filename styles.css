@@ -56,13 +56,14 @@ a {
 
 .left-section {
     width: 50%; /* Keep the left section 50% width */
-    padding-right: 0; /* Reset any additional padding */
-    margin-top: 0; /* Ensure the text block stays at the top */
+    padding-right: 10px; /* Reset any additional padding */
+    margin-top: 10px; /* Ensure the text block stays at the top */
 }
 
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
     padding-left: 0; /* Reset any additional padding */
+    padding-right: 10px;
     text-align: center; /* Center align the content in the right section */
 }
 
