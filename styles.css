@@ -31,14 +31,14 @@ body {
     width: 50%;
 }
 
-/* Creating a repeating ribbon with the rotated image */
+/* Creating a repeating ribbon with the image */
 .ribbon {
     width: 100%; /* Full width of the container */
     height: 60px; /* Adjust height as needed */
     background-image: url('images/surfboard.png'); /* Path to your image */
     background-repeat: repeat-x; /* Repeat the image horizontally */
-    background-size: contain; /* Ensure the image scales to fit within the height */
-    /* transform: rotate(45deg); */ /* Temporarily comment out rotation for troubleshooting */
+    background-position: top left; /* Align the image to the top left */
+    background-size: contain; /* Scale the image so it fits within the height */
     margin-bottom: 20px; /* Adds some space between the ribbon and the content below */
 }
 
