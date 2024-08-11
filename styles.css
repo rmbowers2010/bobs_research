@@ -70,3 +70,17 @@ a {
     margin-top: 20px; /* Adjust top margin to center it between ribbons */
     margin-bottom: 20px; /* Adjust bottom margin to center it between ribbons */
 }
+
+
+ul.one-tab {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+ul.one-tab li {
+    margin-bottom: 15px; /* Space between each publication */
+}
+
+ul.one-tab a {
+    font-weight: bold; /* Make the publication title bold */
+}
