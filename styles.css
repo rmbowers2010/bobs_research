@@ -1,17 +1,35 @@
 body {
     background: aliceblue;
+}
+
+.one-tab,
+.two-tab {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body spans the full height of the viewport */
+    line-height: 1.2; /* Minimal line-height with a bit of spacing */
+}
+
+h1.two-tab {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px; /* Add a bit of space below the header */
+}
+
+p.one-tab {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px; /* Add space between each paragraph */
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 10px; /* Add space below each link */
 }
 
 .container {
-    flex: 1; /* Allow the container to expand and take up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space content evenly between top and bottom */
+    width: 100%;
 }
 
 .ribbon {
@@ -21,39 +39,32 @@ body {
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: top left; /* Align the image to the top left */
     background-size: contain; /* Scale the image so it fits within the height */
+    margin-bottom: 20px; /* Buffer space between the ribbon and the content below */
 }
 
 .main-content {
     display: flex;
     width: 100%;
-    flex: 1; /* Allow main content to take up remaining vertical space */
     padding-left: 20px; /* Add padding to the main content to match the left section's padding */
-    padding-right: 20px; /* Add padding to the right for buffer space */
+    padding-right: 0; /* Remove padding on the right to move the middle image closer to the right margin */
 }
 
 .left-section {
     width: 50%; /* Keep the left section 50% width */
-    padding-right: 20px; /* Add padding to separate text from image */
+    padding-right: 0; /* Reset any additional padding */
     margin-top: 0; /* Ensure the text block stays at the top */
 }
 
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
     padding-left: 0; /* Reset any additional padding */
-    text-align: right; /* Ensure text in right section aligns right */
-    display: flex;
-    align-items: center; /* Center the image vertically in the available space */
-    justify-content: flex-end; /* Right-align the image */
 }
 
 .middle-image {
-    max-width: 100%; /* Let the image expand to fill its container width */
-    max-height: calc(100vh - 120px); /* Ensure the image fits between ribbons, subtracting their height */
-    object-fit: contain; /* Ensure the image fits within its container */
-    margin-right: 20px; /* Buffer space on the right */
-    margin-bottom: 20px; /* Buffer space on the bottom */
-}
-
-.ribbon-bottom {
-    margin-top: auto; /* Push the bottom ribbon to the bottom of the page */
+    float: right; /* Right-align the image */
+    width: auto; /* Let the width adjust based on the image's aspect ratio */
+    height: auto; /* Ensure the image maintains its natural height */
+    max-width: 100%; /* Make sure the image doesn't overflow the container */
+    margin-top: 0; /* Align the image with the top of the section */
+    margin-right: 0; /* Ensure the image is close to the right edge */
 }
