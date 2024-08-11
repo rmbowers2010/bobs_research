@@ -1,7 +1,5 @@
 body {
-    /* margin: 0; */
     background: aliceblue;
-    /* text-align: left; */
 }
 
 .one-tab {
@@ -10,4 +8,44 @@ body {
 
 .two-tab {
     text-indent: 40px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-section {
+    width: 50%;
+}
+
+.right-section {
+    width: 50%;
+}
+
+.rotated-image {
+    transform: rotate(90deg);
+    width: 75%; /* 3/4 of the page */
+    height: auto;
+    margin-bottom: 20px; /* Adds some space between the rotated image and the content below */
+}
+
+.bottom-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px; /* Adds some space between the bottom image and the content above */
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    border: none;
 }
