@@ -6,19 +6,29 @@ body {
 .two-tab {
     margin: 0; /* Remove all margins */
     padding: 0; /* Remove all padding */
-    line-height: 1; /* Further reduce line height */
+    line-height: 1; /* Control line height to reduce spacing between lines */
 }
 
-p {
-    margin: 0; /* Remove all margins from paragraph tags */
-    padding: 0; /* Remove all padding from paragraph tags */
-    line-height: 1; /* Further reduce line height */
+h1.two-tab {
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Reduce line height */
+    margin-bottom: 5px; /* Small space between the heading and next element */
 }
 
-h1 {
-    margin: 0; /* Remove default margin for h1 */
-    padding: 0; /* Remove default padding for h1 */
-    line-height: 1.1; /* Slightly increase line height for better readability in headers */
+p.one-tab {
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Reduce line height */
+    margin-bottom: 5px; /* Small space between paragraphs */
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Reduce line height */
+    margin-bottom: 5px; /* Small space below the link */
+    display: block; /* Ensure the link behaves like a block element */
 }
 
 .container {
