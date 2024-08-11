@@ -6,13 +6,19 @@ body {
 .two-tab {
     margin: 0; /* Remove all margins */
     padding: 0; /* Remove all padding */
-    line-height: 1.2; /* Control line height to reduce spacing between lines */
+    line-height: 1; /* Further reduce line height */
 }
 
 p {
     margin: 0; /* Remove all margins from paragraph tags */
     padding: 0; /* Remove all padding from paragraph tags */
-    line-height: 1.2; /* Control line height to reduce spacing between lines */
+    line-height: 1; /* Further reduce line height */
+}
+
+h1 {
+    margin: 0; /* Remove default margin for h1 */
+    padding: 0; /* Remove default padding for h1 */
+    line-height: 1.1; /* Slightly increase line height for better readability in headers */
 }
 
 .container {
