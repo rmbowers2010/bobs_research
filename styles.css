@@ -1,36 +1,36 @@
 /* Global Styles */
 body {
     background: aliceblue;
-    margin: 0; /* Remove default body margin */
+    margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    min-height: 100vh;
 }
 
 .one-tab,
 .two-tab {
     margin: 0;
     padding: 0;
-    line-height: 1.2; /* Minimal line-height with a bit of spacing */
+    line-height: 1.2;
 }
 
 h1.two-tab {
     margin: 0;
     padding: 0;
-    margin-bottom: 10px; /* Add a bit of space below the header */
+    margin-bottom: 10px;
 }
 
 p.one-tab {
     margin: 0;
     padding: 0;
-    margin-bottom: 10px; /* Add space between each paragraph */
+    margin-bottom: 10px;
 }
 
 a {
     margin: 0;
     padding: 0;
     display: block;
-    margin-bottom: 10px; /* Add space below each link */
+    margin-bottom: 10px;
 }
 
 /* Container and Layout */
@@ -39,70 +39,67 @@ a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between header and footer */
+    justify-content: space-between;
 }
 
 .ribbon {
-    width: 100%; /* Full width of the container */
-    height: 60px; /* Adjust height as needed */
-    background-image: url('images/surfboard.png'); /* Path to your image */
-    background-repeat: repeat-x; /* Repeat the image horizontally */
-    background-position: top left; /* Align the image to the top left */
-    background-size: contain; /* Scale the image so it fits within the height */
+    width: 100%;
+    height: 60px;
+    background-image: url('images/surfboard.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: contain;
 }
 
 .main-content {
     display: flex;
     width: 100%;
-    padding-left: 20px; /* Add padding to the main content to match the left section's padding */
-    padding-right: 20px; /* Keep padding consistent on the right */
-    padding-top: 20px; /* Add top padding to create space between top ribbon and text */
-    flex-grow: 1; /* Allow the main content to take up the remaining space */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    flex-grow: 1;
 }
 
 .left-section {
-    width: 50%; /* Keep the left section 50% width */
-    padding-right: 0; /* Reset any additional padding */
-    margin-top: 0; /* Ensure the text block stays at the top */
+    width: 50%;
+    padding-right: 0;
+    margin-top: 0;
 }
 
 .right-section {
-    width: 50%; /* Ensure the right section takes up half the width */
-    padding-left: 0; /* Reset any additional padding */
-    text-align: right; /* Align content to the right */
-    margin-bottom: 200px; /* Add whitespace below the right image */
-    position: relative; /* Use relative positioning to adjust the image */
+    width: 50%;
+    padding-left: 0;
+    text-align: right;
+    margin-bottom: 200px;
 }
 
-/* Default styles */
+/* Image Styling */
 .right-image {
-    width: auto; /* Maintain the image's natural width */
+    width: 40%; /* Adjust to your desired size */
     height: auto; /* Maintain the aspect ratio */
-    margin-right: 0; /* Remove margin to bring the image closer to the edge */
-    display: block; /* Ensure the image is treated as a block element */
-    max-width: 100%; /* Ensure the image doesn't overflow the container */
-    position: absolute; /* Position the image absolutely within the right-section */
-    right: 0; /* Align the image to the right edge */
+    margin-right: 10px; /* Small margin to create a gap between the image and the right edge */
+    display: block;
+    max-width: 100%;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .right-image {
-        width: 50%; /* Adjust size for smaller screens */
-        margin: 10px auto; /* Reduce margin for smaller screens and center */
+        width: 50%;
+        margin: 10px auto;
     }
 }
 
 /* Publications List */
 ul.one-tab {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none;
     padding: 0;
 }
 
 ul.one-tab li {
-    margin-bottom: 15px; /* Space between each publication */
+    margin-bottom: 15px;
 }
 
 ul.one-tab a {
-    font-weight: bold; /* Make the publication title bold */
+    font-weight: bold;
 }
