@@ -89,7 +89,6 @@ a {
     max-width: 100%; /* Ensure the image doesn't overflow its container */
     object-fit: contain; /* Ensure the image retains its aspect ratio */
     margin-top: 20px; /* Buffer space between the top ribbon and the image */
-    margin-right: 20px; /* Add white space to the right of the image */
     display: block; /* Ensure the image is treated as a block element */
 }
 
