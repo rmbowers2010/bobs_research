@@ -1,4 +1,11 @@
 /* Global Styles */
+html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+}
+
 body {
     background: aliceblue;
 }
@@ -31,8 +38,9 @@ a {
 
 /* Container and Layout */
 .container {
-    width: 100%;
-    text-align: center; /* Center align content */
+    flex: 1; /* Allow container to expand and fill available space */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
 }
 
 .ribbon {
@@ -42,28 +50,35 @@ a {
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: top left; /* Align the image to the top left */
     background-size: contain; /* Scale the image so it fits within the height */
-    margin-bottom: 20px; /* Buffer space between the ribbon and the content below */
+}
+
+.top-ribbon {
+    margin-bottom: 20px; /* Space between the top ribbon and main content */
+}
+
+.bottom-ribbon {
+    margin-top: auto; /* Push the ribbon to the bottom of the page */
 }
 
 .main-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px; /* Add padding to the main content to match the left section's padding */
+    padding-left: 20px; /* Add padding to the main content */
     padding-right: 20px; /* Keep padding consistent on the right */
-    height: 100%; /* Ensure it takes up the full height between ribbons */
+    flex: 1; /* Allow main content to expand */
 }
 
 .left-section {
     width: 50%; /* Keep the left section 50% width */
-    padding-right: 10px; /* Reset any additional padding */
+    padding-right: 10px; /* Space on the right */
     margin-top: 10px; /* Ensure the text block stays at the top */
 }
 
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
     padding-left: 0; /* Reset any additional padding */
-    padding-right: 10px;
+    padding-right: 10px; /* Space on the right */
     text-align: center; /* Center align the content in the right section */
 }
 
