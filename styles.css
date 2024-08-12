@@ -80,6 +80,21 @@ a {
     display: block;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+}
+
+.main-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .right-image {
