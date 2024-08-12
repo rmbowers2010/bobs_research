@@ -80,7 +80,7 @@ a {
     height: auto;
     display: block;
     max-width: none; /* Allow image to stretch to the container's right edge */
-    margin-right: 0; /* Ensure no margin on the right */
+    margin-right: 5%; /* Ensure no margin on the right */
 }
 
 /* Responsive Styles */
