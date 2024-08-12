@@ -53,7 +53,7 @@ a {
 }
 
 .top-ribbon {
-    margin-bottom: 20px; /* Space between the top ribbon and main content */
+    margin-bottom: 10px; /* Space between the top ribbon and main content */
 }
 
 .bottom-ribbon {
@@ -62,39 +62,38 @@ a {
 
 .main-content {
     display: flex;
-    justify-content: flex-end; /* Align the right section to the end of the container */
+    justify-content: space-between;
     align-items: flex-start; /* Align items at the start */
-    padding: 0 20px; /* Add padding to the main content */
-    height: calc(100% - 120px); /* Calculate height to fit between ribbons (60px each) */
+    padding: 10px; /* Add padding to the main content */
+    flex: 1; /* Allow main content to expand and fill the space */
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
 }
 
 .left-section {
     width: 50%; /* Keep the left section 50% width */
+    padding-right: 20px; /* Add space on the right */
     text-align: left; /* Align text to the left */
 }
 
 .right-section {
     width: 50%; /* Ensure the right section takes up half the width */
-    text-align: right; /* Align text to the right */
-    display: flex; /* Use Flexbox layout */
-    justify-content: flex-end; /* Align content to the end */
-    align-items: flex-start; /* Align items to the start */
     padding-left: 20px; /* Add space on the left */
+    text-align: center; /* Center align the content in the right section */
 }
 
+/* Default styles */
 .right-image {
-    height: 30%; /* Set height to 30% of the vertical space between ribbons */
-    max-height: 30vh; /* Ensure image doesn't exceed 30% of the viewport height */
-    width: auto; /* Maintain the aspect ratio */
-    margin-top: 20px; /* Buffer space between the top ribbon and the image */
+    width: 50%; /* Reduce the image size to 50% of its original size */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image within its container */
     display: block; /* Ensure the image is treated as a block element */
+    max-width: 100%; /* Ensure the image doesn't overflow the container */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .right-image {
-        height: 30%; /* Adjust size for smaller screens */
+        width: 50%; /* Adjust size for smaller screens */
         margin: 10px auto; /* Reduce margin for smaller screens and center */
     }
 }
