@@ -67,20 +67,19 @@ a {
 }
 
 .right-section {
-    width: 50%; /* Keep the right section taking up half the width */
+    flex: 1; /* Allow the right section to take up the remaining space */
     padding-left: 0;
-    padding-right: 0; /* Remove padding on the right to bring the image closer */
-    text-align: right;
+    text-align: right; /* Align content to the right */
     margin-bottom: 200px;
 }
 
 .right-image {
-    width: 20%; /* Maintain the image size at 20% of the container's width */
+    width: 20%; /* Keep the image size at 20% of the container's width */
     height: auto; /* Maintain the aspect ratio */
     margin-right: 0; /* Ensure no margin is pushing the image away from the edge */
     display: block;
-    max-width: none; /* Remove any limitation on the image's width */
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .right-image {
