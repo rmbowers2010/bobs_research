@@ -66,7 +66,8 @@ a {
     align-items: center;
     padding-left: 20px; /* Add padding to the main content */
     padding-right: 20px; /* Keep padding consistent on the right */
-    flex: 1; /* Allow main content to expand */
+    flex: 1; /* Allow main content to expand and fill the space */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
 }
 
 .left-section {
