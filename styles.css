@@ -56,6 +56,7 @@ a {
     width: 100%;
     padding-left: 20px; /* Add padding to the main content to match the left section's padding */
     padding-right: 20px; /* Keep padding consistent on the right */
+    padding-top: 20px; /* Add top padding to create space between top ribbon and text */
     flex-grow: 1; /* Allow the main content to take up the remaining space */
 }
 
@@ -73,7 +74,7 @@ a {
 
 /* Default styles */
 .right-image {
-    width: 50%; /* Reduce the image size to 50% of its original size */
+    width: 40%; /* Set the image size to 40% of its original size */
     height: auto; /* Maintain the aspect ratio */
     margin-right: 10px; /* Small margin to add a bit of white space between the image and the right edge */
     display: block; /* Ensure the image is treated as a block element */
