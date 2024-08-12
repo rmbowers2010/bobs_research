@@ -62,7 +62,7 @@ a {
 
 .left-section {
     width: 50%;
-    padding-right: 5%; /* Use percentage-based padding for responsive spacing */
+    padding-right: 2.5%; /* Use percentage-based padding for responsive spacing */
     margin-top: 0;
 }
 
