@@ -76,7 +76,7 @@ a {
 }
 
 .right-image {
-    width: 50%; /* Maintain image size */
+    width: 30%; /* Maintain image size */
     height: auto;
     display: block;
     max-width: none; /* Allow image to stretch to the container's right edge */
