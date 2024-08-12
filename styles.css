@@ -1,116 +1,124 @@
 /* Global Styles */
-html, body {
-    height: 100%; /* Ensure the body takes up the full height */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Use Flexbox layout */
-    flex-direction: column; /* Arrange items vertically */
-}
-
 body {
     background: aliceblue;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .one-tab,
 .two-tab {
     margin: 0;
     padding: 0;
-    line-height: 1.2; /* Minimal line-height with a bit of spacing */
+    line-height: 1.2;
 }
 
 h1.two-tab {
     margin: 0;
     padding: 0;
-    margin-bottom: 10px; /* Add a bit of space below the header */
+    margin-bottom: 10px;
 }
 
 p.one-tab {
     margin: 0;
     padding: 0;
-    margin-bottom: 10px; /* Add space between each paragraph */
+    margin-bottom: 10px;
 }
 
 a {
     margin: 0;
     padding: 0;
     display: block;
-    margin-bottom: 10px; /* Add space below each link */
+    margin-bottom: 10px;
 }
 
 /* Container and Layout */
 .container {
-    flex: 1; /* Allow container to expand and fill available space */
-    display: flex; /* Use Flexbox layout */
-    flex-direction: column; /* Arrange items vertically */
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ribbon {
-    width: 100%; /* Full width of the container */
-    height: 60px; /* Adjust height as needed */
-    background-image: url('images/surfboard.png'); /* Path to your image */
-    background-repeat: repeat-x; /* Repeat the image horizontally */
-    background-position: top left; /* Align the image to the top left */
-    background-size: contain; /* Scale the image so it fits within the height */
-}
-
-.top-ribbon {
-    margin-bottom: 20px; /* Space between the top ribbon and main content */
-}
-
-.bottom-ribbon {
-    margin-top: auto; /* Push the ribbon to the bottom of the page */
+    width: 100%;
+    height: 60px;
+    background-image: url('images/surfboard.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: contain;
 }
 
 .main-content {
     display: flex;
-    justify-content: flex-end; /* Align the right section to the end of the container */
-    align-items: flex-start; /* Align items at the start */
-    padding: 0 20px; /* Add padding to the main content */
-    height: calc(100% - 120px); /* Calculate height to fit between ribbons (60px each) */
-    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    width: 100%;
+    padding-left: 5%; /* Use percentage-based padding for responsive spacing */
+    padding-right: 0; /* Remove padding on the right */
+    padding-top: 20px;
+    flex-grow: 1;
 }
 
 .left-section {
-    width: 50%; /* Keep the left section 50% width */
-    text-align: left; /* Align text to the left */
+    width: 50%;
+    padding-right: 5%; /* Use percentage-based padding for responsive spacing */
+    margin-top: 0;
 }
 
 .right-section {
-    width: 50%; /* Ensure the right section takes up half the width */
-    text-align: right; /* Align text to the right */
-    display: flex; /* Use Flexbox layout */
-    justify-content: flex-end; /* Align content to the end */
-    align-items: flex-start; /* Align items to the start */
-    padding-left: 20px; /* Add space on the left */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right side */
+    align-items: flex-start; /* Align items to the top of the container */
+    margin-bottom: 200px;
+    padding-right: 5%; /* Use percentage-based padding for consistent spacing */
 }
 
 .right-image {
-    height: 30%; /* Set height to 30% of the vertical space between ribbons */
-    width: auto; /* Maintain the aspect ratio */
-    max-width: 30%; /* Ensure the image doesn't overflow its container */
-    object-fit: contain; /* Ensure the image retains its aspect ratio */
-    margin-top: 20px; /* Buffer space between the top ribbon and the image */
-    display: block; /* Ensure the image is treated as a block element */
+    width: 20%; /* Maintain image size */
+    height: auto;
+    display: block;
+    max-width: none; /* Allow image to stretch to the container's right edge */
+    margin-right: 0; /* Ensure no margin on the right */
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        padding-left: 10%; /* Adjust padding for smaller screens */
+        padding-right: 10%; /* Adjust padding for smaller screens */
+    }
+    
+    .left-section {
+        width: 100%; /* Take full width on smaller screens */
+        padding-right: 0; /* Remove right padding on smaller screens */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+    
+    .right-section {
+        width: 100%; /* Take full width on smaller screens */
+        justify-content: center; /* Center the image on smaller screens */
+        padding-right: 0; /* Remove right padding on smaller screens */
+    }
+    
     .right-image {
-        height: auto; /* Adjust height to auto for smaller screens */
-        width: 50%; /* Adjust size for smaller screens */
-        margin: 10px auto; /* Reduce margin for smaller screens and center */
+        width: 50%; /* Increase the image size on smaller screens */
+        margin: 0 auto; /* Center the image on smaller screens */
     }
 }
 
 /* Publications List */
 ul.one-tab {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none;
     padding: 0;
 }
 
 ul.one-tab li {
-    margin-bottom: 15px; /* Space between each publication */
+    margin-bottom: 15px;
 }
 
 ul.one-tab a {
-    font-weight: bold; /* Make the publication title bold */
+    font-weight: bold;
 }
