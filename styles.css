@@ -62,7 +62,7 @@ a {
 
 .left-section {
     width: 50%;
-    padding-right: 2.5%; /* Use percentage-based padding for responsive spacing */
+    padding-right: 5%; /* Use percentage-based padding for responsive spacing */
     margin-top: 0;
 }
 
@@ -72,11 +72,11 @@ a {
     justify-content: flex-end; /* Align image to the right side */
     align-items: flex-start; /* Align items to the top of the container */
     margin-bottom: 200px;
-    padding-right: 20%; /* Use percentage-based padding for consistent spacing */
+    padding-right: 5%; /* Use percentage-based padding for consistent spacing */
 }
 
 .right-image {
-    width: 500%; /* Maintain image size */
+    width: 50%; /* Maintain image size */
     height: auto;
     display: block;
     max-width: none; /* Allow image to stretch to the container's right edge */
