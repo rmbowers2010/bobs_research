@@ -81,7 +81,7 @@ a {
     display: block;
 }
 
-body, html {
+/*body, html {
     margin: 0;
     padding: 0;
 }
@@ -95,7 +95,7 @@ body, html {
     padding-left: 0;
     padding-right: 0;
 }
-
+*/
 /* Responsive Styles */
 @media (max-width: 768px) {
     .right-image {
