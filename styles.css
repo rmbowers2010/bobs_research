@@ -86,7 +86,7 @@ a {
 .right-image {
     height: 30%; /* Set height to 30% of the vertical space between ribbons */
     width: auto; /* Maintain the aspect ratio */
-    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    max-width: 60%; /* Ensure the image doesn't overflow its container */
     object-fit: contain; /* Ensure the image retains its aspect ratio */
     margin-top: 20px; /* Buffer space between the top ribbon and the image */
     display: block; /* Ensure the image is treated as a block element */
