@@ -54,8 +54,8 @@ a {
 .main-content {
     display: flex;
     width: 100%;
-    padding-left: 5%; /* Use percentage-based padding for responsive spacing */
-    padding-right: 0; /* Remove padding on the right */
+    padding-left: 1%; /* Use percentage-based padding for responsive spacing */
+    padding-right: 1%; /* Remove padding on the right */
     padding-top: 20px;
     flex-grow: 1;
 }
@@ -72,7 +72,7 @@ a {
     justify-content: flex-end; /* Align image to the right side */
     align-items: flex-start; /* Align items to the top of the container */
     margin-bottom: 200px;
-    padding-right: 2.5%; /* Use percentage-based padding for consistent spacing */
+    padding-right: 2%; /* Use percentage-based padding for consistent spacing */
 }
 
 .right-image {
@@ -80,15 +80,15 @@ a {
     height: auto;
     display: block;
     max-width: none; /* Allow image to stretch to the container's right edge */
-    margin-right: 5%; /* Ensure no margin on the right */
+    margin-right: 0; /* Ensure no margin on the right */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column; /* Stack sections vertically on smaller screens */
-        padding-left: 10%; /* Adjust padding for smaller screens */
-        padding-right: 10%; /* Adjust padding for smaller screens */
+        padding-left: 8%; /* Adjust padding for smaller screens */
+        padding-right: 8%; /* Adjust padding for smaller screens */
     }
     
     .left-section {
