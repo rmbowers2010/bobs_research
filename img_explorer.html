@@ -1,59 +1,66 @@
-<!-- ...existing code... -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image metadata explorer</title>
+    <title>IMG Metadata Explorer</title>
     <style>
-      /* small inline styles so the file is self-contained */
-      body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin: 0; }
-      #status { padding: 8px 12px; background: #f6f6f9; border-bottom: 1px solid #e0e0e6; color: #333; }
-      iframe { border: 0; width: 100%; height: calc(100vh - 40px); }
+        body { margin: 0; font-family: Arial, sans-serif; }
+        #message { 
+            padding: 10px; 
+            background: #f0f0f0; 
+            text-align: center;
+            font-size: 14px;
+        }
+        iframe { 
+            width: 100%; 
+            height: calc(100vh - 40px); 
+            border: none; 
+        }
     </style>
 </head>
 <body>
-    <div id="status">Attempting to load the faster NERSC instance…</div>
-    <iframe id="appFrame" src="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/" title="Image metadata explorer"></iframe>
+    <div id="message">Loading from NERSC (faster)...</div>
+    <iframe id="appFrame" src="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/"></iframe>
 
     <script>
-      (function(){
-        const NERSC = 'http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/';
-        const FALLBACK = 'https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/';
-        const TIMEOUT_MS = 8000; // adjust as needed
-        const statusEl = document.getElementById('status');
+        const NERSC_URL = 'http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/';
+        const FALLBACK_URL = 'https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/';
+        const TIMEOUT = 5000; // 5 seconds
+
         const iframe = document.getElementById('appFrame');
+        const message = document.getElementById('message');
+        let loaded = false;
 
-        let fallbackUsed = false;
-        const t = setTimeout(() => {
-          if (!fallbackUsed) {
-            fallbackUsed = true;
-            statusEl.textContent = 'NERSC did not respond — falling back to shinyapps.io';
-            iframe.src = FALLBACK;
-          }
-        }, TIMEOUT_MS);
+        // Set a timeout to switch to fallback if NERSC doesn't load
+        const fallbackTimer = setTimeout(() => {
+            if (!loaded) {
+                message.textContent = 'NERSC unavailable, switching to shinyapps.io...';
+                iframe.src = FALLBACK_URL;
+            }
+        }, TIMEOUT);
 
-        // If iframe loads any document, treat that as success and cancel fallback
+        // Listen for iframe load event
         iframe.addEventListener('load', () => {
-          clearTimeout(t);
-          // If the iframe ended up on the fallback, indicate that, otherwise indicate success
-          if (iframe.src.indexOf(FALLBACK) !== -1 || fallbackUsed) {
-            statusEl.textContent = 'Loaded (fallback)';
-          } else {
-            statusEl.textContent = 'Loaded (NERSC)';
-          }
+            clearTimeout(fallbackTimer);
+            loaded = true;
+            // Check which URL loaded
+            try {
+                if (iframe.src.includes('nersc.org')) {
+                    message.textContent = 'Loaded from NERSC ✓';
+                } else {
+                    message.textContent = 'Loaded from shinyapps.io ✓';
+                }
+            } catch (e) {
+                message.textContent = 'App loaded ✓';
+            }
         });
 
-        // Optional: allow user to manually force fallback if they want
-        statusEl.addEventListener('click', () => {
-          if (!fallbackUsed) {
-            fallbackUsed = true;
-            clearTimeout(t);
-            statusEl.textContent = 'Switching to fallback (requested)';
-            iframe.src = FALLBACK;
-          }
+        // Fallback for mixed content blocking
+        iframe.addEventListener('error', () => {
+            clearTimeout(fallbackTimer);
+            message.textContent = 'Switching to shinyapps.io...';
+            iframe.src = FALLBACK_URL;
         });
-      })();
     </script>
 </body>
 </html>
-<!-- ...existing code... -->
