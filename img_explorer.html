@@ -3,64 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMG Metadata Explorer</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        #message { 
-            padding: 10px; 
-            background: #f0f0f0; 
-            text-align: center;
-            font-size: 14px;
-        }
-        iframe { 
-            width: 100%; 
-            height: calc(100vh - 40px); 
-            border: none; 
-        }
-    </style>
 </head>
 <body>
-    <div id="message">Loading from NERSC (faster)...</div>
-    <iframe id="appFrame" src="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/"></iframe>
-
-    <script>
-        const NERSC_URL = 'http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/';
-        const FALLBACK_URL = 'https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/';
-        const TIMEOUT = 5000; // 5 seconds
-
-        const iframe = document.getElementById('appFrame');
-        const message = document.getElementById('message');
-        let loaded = false;
-
-        // Set a timeout to switch to fallback if NERSC doesn't load
-        const fallbackTimer = setTimeout(() => {
-            if (!loaded) {
-                message.textContent = 'NERSC unavailable, switching to shinyapps.io...';
-                iframe.src = FALLBACK_URL;
-            }
-        }, TIMEOUT);
-
-        // Listen for iframe load event
-        iframe.addEventListener('load', () => {
-            clearTimeout(fallbackTimer);
-            loaded = true;
-            // Check which URL loaded
-            try {
-                if (iframe.src.includes('nersc.org')) {
-                    message.textContent = 'Loaded from NERSC ✓';
-                } else {
-                    message.textContent = 'Loaded from shinyapps.io ✓';
-                }
-            } catch (e) {
-                message.textContent = 'App loaded ✓';
-            }
-        });
-
-        // Fallback for mixed content blocking
-        iframe.addEventListener('error', () => {
-            clearTimeout(fallbackTimer);
-            message.textContent = 'Switching to shinyapps.io...';
-            iframe.src = FALLBACK_URL;
-        });
-    </script>
+    <p>Click to open the app: <a href="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/" target="_blank">IMG Metadata Explorer (NERSC)</a></p>
 </body>
 </html>
