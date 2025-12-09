@@ -1,10 +1,59 @@
+<!-- ...existing code... -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image metadata explorer</title>
+    <style>
+      /* small inline styles so the file is self-contained */
+      body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin: 0; }
+      #status { padding: 8px 12px; background: #f6f6f9; border-bottom: 1px solid #e0e0e6; color: #333; }
+      iframe { border: 0; width: 100%; height: calc(100vh - 40px); }
+    </style>
 </head>
 <body>
-    <iframe height="1200" width="100%" frameborder="no" src="https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/"> </iframe>
+    <div id="status">Attempting to load the faster NERSC instance…</div>
+    <iframe id="appFrame" src="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/" title="Image metadata explorer"></iframe>
+
+    <script>
+      (function(){
+        const NERSC = 'http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/';
+        const FALLBACK = 'https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/';
+        const TIMEOUT_MS = 8000; // adjust as needed
+        const statusEl = document.getElementById('status');
+        const iframe = document.getElementById('appFrame');
+
+        let fallbackUsed = false;
+        const t = setTimeout(() => {
+          if (!fallbackUsed) {
+            fallbackUsed = true;
+            statusEl.textContent = 'NERSC did not respond — falling back to shinyapps.io';
+            iframe.src = FALLBACK;
+          }
+        }, TIMEOUT_MS);
+
+        // If iframe loads any document, treat that as success and cancel fallback
+        iframe.addEventListener('load', () => {
+          clearTimeout(t);
+          // If the iframe ended up on the fallback, indicate that, otherwise indicate success
+          if (iframe.src.indexOf(FALLBACK) !== -1 || fallbackUsed) {
+            statusEl.textContent = 'Loaded (fallback)';
+          } else {
+            statusEl.textContent = 'Loaded (NERSC)';
+          }
+        });
+
+        // Optional: allow user to manually force fallback if they want
+        statusEl.addEventListener('click', () => {
+          if (!fallbackUsed) {
+            fallbackUsed = true;
+            clearTimeout(t);
+            statusEl.textContent = 'Switching to fallback (requested)';
+            iframe.src = FALLBACK;
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
+<!-- ...existing code... -->
