@@ -8,3 +8,73 @@
     <iframe height="1200" width="100%" frameborder="no" src="http://shiny-app-worldmap.shiny-singlecell.development.svc.spin.nersc.org/"> </iframe>
 </body>
 </html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG isolate genome worldmap</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        #message { 
+            padding: 15px; 
+            background: #f0f0f0; 
+            text-align: center;
+            font-size: 14px;
+        }
+        iframe { 
+            width: 100%; 
+            height: 100vh; 
+            border: none; 
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Checking NERSC availability...</div>
+    <iframe id="fallbackFrame" src="https://b46mns-robert-bowers.shinyapps.io/shiny_app_worldmap/"></iframe>
+
+    <script>
+        const NERSC_URL = 'http://shiny-app-worldmap.shiny-singlecell.development.svc.spin.nersc.org/';
+        const TIMEOUT = 3000; // 3 seconds to check if NERSC is up
+
+        // Try to check if NERSC is reachable
+        const img = new Image();
+        let redirected = false;
+
+        const fallbackTimer = setTimeout(() => {
+            if (!redirected) {
+                // NERSC didn't respond in time, show shinyapps.io iframe
+                document.getElementById('message').textContent = 'NERSC unavailable - using fallback';
+                document.getElementById('fallbackFrame').style.display = 'block';
+            }
+        }, TIMEOUT);
+
+        // Try to load a favicon or any resource from NERSC to test connectivity
+        img.onload = () => {
+            clearTimeout(fallbackTimer);
+            redirected = true;
+            window.location.href = NERSC_URL;
+        };
+        
+        img.onerror = () => {
+            clearTimeout(fallbackTimer);
+            // NERSC failed, show fallback
+            document.getElementById('message').textContent = 'NERSC unavailable - using fallback';
+            document.getElementById('fallbackFrame').style.display = 'block';
+        };
+
+        // Attempt to load NERSC (will fail due to CORS, but that's ok - we'll redirect anyway)
+        img.src = NERSC_URL + 'favicon.ico?' + Date.now();
+        
+        // Immediate redirect attempt (will work if user previously visited or NERSC is up)
+        setTimeout(() => {
+            if (!redirected) {
+                redirected = true;
+                window.location.href = NERSC_URL;
+            }
+        }, 500);
+    </script>
+</body>
+</html>
