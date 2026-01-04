@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>IMG Isolate Genome Worldmap</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,13 +13,8 @@
     button {
       font-size: 16px;
       padding: 12px 20px;
+      margin: 10px;
       cursor: pointer;
-      margin-top: 20px;
-    }
-    #status {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #555;
     }
   </style>
 </head>
@@ -29,43 +23,34 @@
 <h2>IMG Isolate Genome Worldmap</h2>
 
 <p>
-  This Shiny app is hosted on NERSC Spin (preferred).
-  <br>
-  If NERSC is unavailable, it will open the shinyapps.io version.
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
 </p>
 
-<button id="openApp">Open Worldmap Shiny App</button>
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
 
-<div id="status">Checking NERSC availability…</div>
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
 
 <script>
-  const NERSC_URL =
-    "http://shiny-app-worldmap.shiny-singlecell.development.svc.spin.nersc.org/";
-  const FALLBACK_URL =
-    "https://b46mns-robert-bowers.shinyapps.io/shiny_app_worldmap/";
+  function openNERSC() {
+    window.open(
+      "http://shiny-app-worldmap.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
 
-  let targetURL = FALLBACK_URL;
-
-  // Probe NERSC availability
-  const img = new Image();
-
-  img.onload = () => {
-    targetURL = NERSC_URL;
-    document.getElementById("status").textContent =
-      "NERSC available — will open Spin-hosted app.";
-  };
-
-  img.onerror = () => {
-    document.getElementById("status").textContent =
-      "NERSC unavailable — will open shinyapps.io fallback.";
-  };
-
-  // Real HTTP request (important)
-  img.src = NERSC_URL + "favicon.ico?" + Date.now();
-
-  document.getElementById("openApp").addEventListener("click", () => {
-    window.open(targetURL, "_blank", "noopener");
-  });
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/shiny_app_worldmap/",
+      "_blank",
+      "noopener"
+    );
+  }
 </script>
 
 </body>
