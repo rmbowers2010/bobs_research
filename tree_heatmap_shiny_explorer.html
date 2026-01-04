@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tree heatmap Shiny explorer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Heatmap Shiny Explorer</title>
+
+  <!-- Immediate redirect -->
+  <meta http-equiv="refresh" content="0; url=http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
 </head>
 <body>
+  <p>Redirecting to Tree Heatmap Shiny Explorer at NERSC…</p>
+  <p>
+    If you are not redirected,
+    <a href="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/">
+      click here
+    </a>.
+  </p>
 
-<iframe
-    src="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/"
-    title="Tree heatmap Shiny explorer">
-</iframe>
-
+  <script>
+    // JS fallback (covers aggressive browsers)
+    window.location.href =
+      "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/";
+  </script>
 </body>
 </html>
