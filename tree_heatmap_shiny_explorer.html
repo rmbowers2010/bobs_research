@@ -5,30 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tree Heatmap Shiny Explorer</title>
 
-  <!-- Immediate redirect -->
-  <meta http-equiv="refresh" content="0; url=http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/">
-
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 60px;
+      background: #fafafa;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    a:hover {
+      background: #005fa3;
     }
   </style>
 </head>
 <body>
-  <p>Redirecting to Tree Heatmap Shiny Explorer at NERSC…</p>
+
+  <h2>Tree Heatmap Shiny Explorer</h2>
+
   <p>
-    If you are not redirected,
-    <a href="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/">
-      click here
-    </a>.
+    This application is hosted at NERSC (HTTP-only).
+    <br>
+    Browsers require a manual click to open it.
   </p>
 
-  <script>
-    // JS fallback (covers aggressive browsers)
-    window.location.href =
-      "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/";
-  </script>
+  <a
+    href="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open Tree Heatmap Shiny App
+  </a>
+
 </body>
 </html>
