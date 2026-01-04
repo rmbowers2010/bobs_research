@@ -2,48 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tree Heatmap Shiny Explorer</title>
-
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px;
-      background: #fafafa;
+      margin: 0;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    a:hover {
-      background: #005fa3;
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <h2>Tree Heatmap Shiny Explorer</h2>
-
-  <p>
-    This application is hosted at NERSC (HTTP-only).
-    <br>
-    Browsers require a manual click to open it.
-  </p>
-
-  <a
-    href="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Open Tree Heatmap Shiny App
-  </a>
+<iframe
+  src="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/"
+  referrerpolicy="no-referrer">
+</iframe>
 
 </body>
 </html>
