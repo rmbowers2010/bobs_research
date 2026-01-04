@@ -1,41 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Tree Heatmap Shiny Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
+<h2>Tree Heatmap Shiny Explorer</h2>
+
+<p>
+  This application is hosted on NERSC Spin (HTTP-only).
+  <br>
+  Modern browsers require a manual click to open it.
+</p>
+
+<button id="openApp">
+  Open Tree Heatmap Shiny App
+</button>
+
 <script>
-  const NERSC_URL =
-    "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/";
-
-  // Dummy resource probe (this is critical)
-  const img = new Image();
-  let redirected = false;
-
-  img.onload = () => {
-    redirected = true;
-    window.location.href = NERSC_URL;
-  };
-
-  img.onerror = () => {
-    // Even if it errors, still attempt navigation
-    redirected = true;
-    window.location.href = NERSC_URL;
-  };
-
-  // This must be an actual HTTP request
-  img.src = NERSC_URL + "favicon.ico?" + Date.now();
-
-  // Safety net (matches your working file)
-  setTimeout(() => {
-    if (!redirected) {
-      window.location.href = NERSC_URL;
-    }
-  }, 500);
+  document.getElementById("openApp").addEventListener("click", () => {
+    window.open(
+      "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  });
 </script>
-
-<p>Opening Tree Heatmap Shiny Explorer…</p>
 
 </body>
 </html>
