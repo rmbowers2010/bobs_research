@@ -1,10 +1,41 @@
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree Heatmap Shiny Explorer</title>
+</head>
 <body>
-<iframe
-  height="1200"
-  width="100%"
-  frameborder="no"
-  src="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/">
-</iframe>
+
+<script>
+  const NERSC_URL =
+    "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/";
+
+  // Dummy resource probe (this is critical)
+  const img = new Image();
+  let redirected = false;
+
+  img.onload = () => {
+    redirected = true;
+    window.location.href = NERSC_URL;
+  };
+
+  img.onerror = () => {
+    // Even if it errors, still attempt navigation
+    redirected = true;
+    window.location.href = NERSC_URL;
+  };
+
+  // This must be an actual HTTP request
+  img.src = NERSC_URL + "favicon.ico?" + Date.now();
+
+  // Safety net (matches your working file)
+  setTimeout(() => {
+    if (!redirected) {
+      window.location.href = NERSC_URL;
+    }
+  }, 500);
+</script>
+
+<p>Opening Tree Heatmap Shiny Explorer…</p>
+
 </body>
 </html>
