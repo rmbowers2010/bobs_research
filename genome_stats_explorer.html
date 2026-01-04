@@ -1,68 +1,1027 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genome stat viz</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        #message { 
-            padding: 15px; 
-            background: #f0f0f0; 
-            text-align: center;
-            font-size: 14px;
-        }
-        iframe { 
-            width: 100%; 
-            height: 100vh; 
-            border: none; 
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div id="message">Checking NERSC availability...</div>
-    <iframe id="fallbackFrame" src="https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/"></iframe>
 
-    <script>
-        const NERSC_URL = 'http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/';
-        const TIMEOUT = 3000; // 3 seconds to check if NERSC is up
+<h2>Genome Statistics Explorer</h2>
 
-        // Try to check if NERSC is reachable
-        const img = new Image();
-        let redirected = false;
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
 
-        const fallbackTimer = setTimeout(() => {
-            if (!redirected) {
-                // NERSC didn't respond in time, show shinyapps.io iframe
-                document.getElementById('message').textContent = 'NERSC unavailable - using fallback';
-                document.getElementById('fallbackFrame').style.display = 'block';
-            }
-        }, TIMEOUT);
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
 
-        // Try to load a favicon or any resource from NERSC to test connectivity
-        img.onload = () => {
-            clearTimeout(fallbackTimer);
-            redirected = true;
-            window.location.href = NERSC_URL;
-        };
-        
-        img.onerror = () => {
-            clearTimeout(fallbackTimer);
-            // NERSC failed, show fallback
-            document.getElementById('message').textContent = 'NERSC unavailable - using fallback';
-            document.getElementById('fallbackFrame').style.display = 'block';
-        };
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
 
-        // Attempt to load NERSC (will fail due to CORS, but that's ok - we'll redirect anyway)
-        img.src = NERSC_URL + 'favicon.ico?' + Date.now();
-        
-        // Immediate redirect attempt (will work if user previously visited or NERSC is up)
-        setTimeout(() => {
-            if (!redirected) {
-                redirected = true;
-                window.location.href = NERSC_URL;
-            }
-        }, 500);
-    </script>
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genome Statistics Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Genome Statistics Explorer</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://genome-quality-stats.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/genome_statistics_explorer/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
 </body>
 </html>
