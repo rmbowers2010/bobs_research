@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shiny Phylogenomics</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background: #fafafa;
+    }
+    button {
+      font-size: 16px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Shiny Phylogenomics</h2>
+
+<p>
+  Preferred: NERSC Spin (HTTP)<br>
+  Backup: shinyapps.io (HTTPS)
+</p>
+
+<button onclick="openNERSC()">
+  Open via NERSC (recommended)
+</button>
+
+<button onclick="openFallback()">
+  Open shinyapps.io fallback
+</button>
+
+<script>
+  function openNERSC() {
+    window.open(
+      "http://shiny-phylogenomics.shiny-singlecell.development.svc.spin.nersc.org/",
+      "_blank",
+      "noopener"
+    );
+  }
+
+  function openFallback() {
+    window.open(
+      "https://b46mns-robert-bowers.shinyapps.io/shiny-phylogenomics/",
+      "_blank",
+      "noopener"
+    );
+  }
+</script>
+
+</body>
+</html>
