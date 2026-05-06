@@ -153,6 +153,11 @@ h1 {
   letter-spacing: 0;
 }
 
+.hero #hero-title {
+  font-size: clamp(2.05rem, 3vw, 2.6rem);
+  line-height: 1.08;
+}
+
 h2 {
   margin-bottom: 14px;
   max-width: 860px;
@@ -268,7 +273,8 @@ h3 {
   position: absolute;
   top: clamp(22px, 4vw, 46px);
   right: clamp(20px, 5vw, 72px);
-  width: clamp(120px, 14vw, 150px);
+  width: 150px;
+  max-width: 150px;
   margin: 0;
   padding: 8px;
   border: 1px solid var(--line);
@@ -291,6 +297,7 @@ h3 {
 
 .corner-photo img {
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 6px;
   object-fit: cover;
@@ -584,9 +591,14 @@ h3 {
     font-size: clamp(2rem, 10vw, 2.75rem);
   }
 
+  .hero #hero-title {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+  }
+
   .corner-photo {
     position: static;
-    width: 110px;
+    width: 120px;
+    max-width: 120px;
     margin: 0 0 28px auto;
   }
 
