@@ -126,7 +126,7 @@ section[id] {
 }
 
 .hero-copy {
-  max-width: min(820px, calc(100% - 112px));
+  max-width: min(820px, calc(100% - 230px));
 }
 
 .eyebrow {
@@ -148,7 +148,7 @@ p {
 h1 {
   margin-bottom: 22px;
   max-width: 11em;
-  font-size: clamp(2.15rem, 4.2vw, 3.55rem);
+  font-size: clamp(2.15rem, 3.6vw, 2.7rem);
   line-height: 1.05;
   letter-spacing: 0;
 }
@@ -266,27 +266,27 @@ h3 {
 
 .corner-photo {
   position: absolute;
-  top: clamp(18px, 3vw, 34px);
+  top: clamp(22px, 4vw, 46px);
   right: clamp(20px, 5vw, 72px);
-  width: clamp(58px, 7vw, 78px);
+  width: clamp(120px, 14vw, 150px);
   margin: 0;
-  padding: 5px;
+  padding: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
-  box-shadow: 0 8px 18px rgba(24, 33, 31, 0.12);
+  box-shadow: 0 12px 28px rgba(24, 33, 31, 0.12);
 }
 
 .corner-photo::before {
   content: "";
   position: absolute;
-  inset: -8px;
+  inset: -12px;
   z-index: -1;
-  border-radius: 12px;
+  border-radius: 14px;
   background-color: #fff7df;
   background-image: url("images/surfboard.png");
   background-repeat: repeat;
-  background-size: 34px 34px;
+  background-size: 48px 48px;
 }
 
 .corner-photo img {
@@ -560,7 +560,7 @@ h3 {
   }
 
   .hero-copy {
-    max-width: calc(100% - 104px);
+    max-width: calc(100% - 220px);
   }
 
   .feature-grid,
@@ -586,7 +586,7 @@ h3 {
 
   .corner-photo {
     position: static;
-    width: 76px;
+    width: 110px;
     margin: 0 0 28px auto;
   }
 
