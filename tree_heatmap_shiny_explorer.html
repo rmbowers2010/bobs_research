@@ -1,46 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tree Heatmap Shiny Explorer</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px;
-      background: #fafafa;
-    }
-    button {
-      font-size: 16px;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Heatmap Shiny Explorer | Robert M. Bowers</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<h2>Tree Heatmap Shiny Explorer</h2>
-
-<p>
-  This application is hosted on NERSC Spin (HTTP-only).
-  <br>
-  Modern browsers require a manual click to open it.
-</p>
-
-<button id="openApp">
-  Open Tree Heatmap Shiny App
-</button>
-
-<script>
-  document.getElementById("openApp").addEventListener("click", () => {
-    window.open(
-      "http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/",
-      "_blank",
-      "noopener"
-    );
-  });
-</script>
-
+<body class="app-launcher-body">
+  <main class="launcher-shell">
+    <section class="launcher-panel" aria-labelledby="app-title">
+      <a class="back-link" href="index.html">Back to site</a>
+      <p class="eyebrow">Shiny app launcher</p>
+      <h1 id="app-title">Tree Heatmap Shiny Explorer</h1>
+      <p class="launcher-copy">
+        Pair a phylogenetic tree with gene presence and absence patterns for comparative analysis.
+      </p>
+      <div class="launcher-actions">
+        <a class="button button-primary" href="http://tree-heatmap-shiny-explorer.shiny-singlecell.development.svc.spin.nersc.org/" target="_blank" rel="noopener">
+          Open NERSC Spin <span aria-hidden="true">-&gt;</span>
+        </a>
+      </div>
+      <p class="launcher-note">Hosted on NERSC Spin.</p>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,70 +1,204 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob's stuff</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website for Robert M. Bowers, microbial genomics research scientist and builder of interactive research apps.">
+  <title>Robert M. Bowers | Microbial Genomics</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Robert M. Bowers home">
+      <span class="brand-mark">RB</span>
+      <span>Robert M. Bowers</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#apps">Apps</a>
+      <a href="#documents">Resume/CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-    <!-- Top ribbon section -->
-    <div class="ribbon top-ribbon"></div>
-
-    <!-- Main content section -->
-    <div class="main-content">
-        <div class="left-section">
-            <h1 class="two-tab">bobs_stuff</h1>
-
-            <p class="one-tab">Link to Publications</p>
-            <p class="one-tab">
-                <a href="https://scholar.google.com/citations?user=BCw3AkMAAAAJ" target="_blank">
-                    My Publications on Google Scholar
-                </a>
-            </p>
-
-            <p class="one-tab">Link to Genome taxonomy and statistics Shiny App</p>
-            <p class="one-tab">
-                <a href="genome_taxonomy_and_stats_explorer.html">
-                    Genome taxonomy & statistics explorer
-                </a>
-            </p>
-
-            <p class="one-tab">Link to Shiny Phylogenomics App</p>
-            <p class="one-tab">
-                <a href="shiny_phylogenomics.html">
-                    Shiny Phylogenomics
-                </a>
-            </p>
-
-            <p class="one-tab">Link to IMG isolate genome worldmap Shiny App</p>
-            <p class="one-tab">
-                <a href="img_worldmap.html">IMG isolate genome worldmap</a>
-            </p>
-
-            <p class="one-tab">Link to phylogeny + gene presence heatmap Shiny App</p>
-            <p class="one-tab">
-                <a href="tree_heatmap_shiny_explorer.html">
-                    Tree heatmap Shiny explorer
-                </a>
-            </p>
-
-            <p class="one-tab">Link to Genome statistics explorer Shiny App</p>
-            <p class="one-tab">
-                <a href="genome_stats_explorer.html">Genome stat vizr</a>
-            </p>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Microbial genomics + research software</p>
+        <h1 id="hero-title">Robert M. Bowers</h1>
+        <p class="lede">
+          Research scientist at the DOE Joint Genome Institute working across single-cell genomics,
+          metagenomics, high-throughput sequencing workflows, and interactive tools for exploring
+          complex biological datasets.
+        </p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a class="button button-primary" href="documents/Bowers_RM_Resume.pdf">
+            Resume <span aria-hidden="true">-&gt;</span>
+          </a>
+          <a class="button button-secondary" href="documents/Bowers_RM_CV.docx">
+            CV <span aria-hidden="true">-&gt;</span>
+          </a>
+          <a class="button button-ghost" href="https://scholar.google.com/citations?user=BCw3AkMAAAAJ" target="_blank" rel="noopener">
+            Google Scholar <span aria-hidden="true">-&gt;</span>
+          </a>
         </div>
-
-        <div class="right-section">
-            <img src="images/Bowers_headshot.jpg" alt="Right Image" class="right-image">
+        <div class="quick-stats" aria-label="Professional highlights">
+          <div>
+            <strong>40+</strong>
+            <span>peer-reviewed publications</span>
+          </div>
+          <div>
+            <strong>15+</strong>
+            <span>years in microbial genomics</span>
+          </div>
+          <div>
+            <strong>6</strong>
+            <span>public research apps</span>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Bottom ribbon section -->
-    <div class="ribbon bottom-ribbon"></div>
+      <figure class="profile-card">
+        <img src="images/Bowers_headshot.jpg" alt="Robert M. Bowers headshot">
+        <figcaption>
+          <strong>Research Scientist</strong>
+          <span>DOE Joint Genome Institute, Berkeley, California</span>
+        </figcaption>
+      </figure>
+    </section>
 
-</div>
+    <section id="documents" class="section section-compact" aria-labelledby="documents-title">
+      <div class="section-heading">
+        <p class="eyebrow">Documents</p>
+        <h2 id="documents-title">Resume and CV</h2>
+      </div>
+      <div class="document-grid">
+        <a class="document-card" href="documents/Bowers_RM_Resume.pdf">
+          <span>PDF</span>
+          <strong>Resume</strong>
+          <small>May 2025, 4 pages</small>
+        </a>
+        <a class="document-card" href="documents/Bowers_RM_CV.docx">
+          <span>DOCX</span>
+          <strong>Curriculum vitae</strong>
+          <small>January 2025</small>
+        </a>
+      </div>
+    </section>
 
+    <section id="research" class="section" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p class="eyebrow">Research focus</p>
+        <h2 id="research-title">Genomes, communities, and practical analysis systems</h2>
+        <p>
+          My work connects wet-lab sequencing, computational genomics, and tools that make large
+          research datasets easier to inspect, compare, and share.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-index">01</span>
+          <h3>Single-cell genomics</h3>
+          <p>Production and analysis of single amplified genomes, including methods for improving genome recovery from individual microbial cells.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-index">02</span>
+          <h3>Metagenomes and isolate genomes</h3>
+          <p>Comparative analyses, quality control, taxonomy, and genome-scale summaries for environmental and host-associated microbial datasets.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-index">03</span>
+          <h3>Reproducible research software</h3>
+          <p>R, Python, Bash, HPC, cloud, containerized workflows, and Shiny apps built for collaborators who need to explore data directly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="apps" class="section section-muted" aria-labelledby="apps-title">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive apps</p>
+        <h2 id="apps-title">Public research tools</h2>
+        <p>Launchers for Shiny applications hosted on NERSC Spin, with shinyapps.io fallbacks where available.</p>
+      </div>
+      <div class="app-grid">
+        <article class="app-card">
+          <span class="app-tag">Taxonomy</span>
+          <h3>Genome taxonomy and statistics explorer</h3>
+          <p>Explore genome taxonomy assignments, quality summaries, and related genome-level statistics.</p>
+          <a class="card-link" href="genome_taxonomy_and_stats_explorer.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+        <article class="app-card">
+          <span class="app-tag">Phylogenomics</span>
+          <h3>Shiny Phylogenomics</h3>
+          <p>Interactively inspect phylogenomic context and summaries for microbial genome datasets.</p>
+          <a class="card-link" href="shiny_phylogenomics.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+        <article class="app-card">
+          <span class="app-tag">Geography</span>
+          <h3>IMG isolate genome worldmap</h3>
+          <p>Browse IMG isolate genome records through a geographic interface.</p>
+          <a class="card-link" href="img_worldmap.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+        <article class="app-card">
+          <span class="app-tag">Tree + heatmap</span>
+          <h3>Tree heatmap Shiny explorer</h3>
+          <p>Pair a phylogenetic tree with gene presence and absence patterns for rapid comparison.</p>
+          <a class="card-link" href="tree_heatmap_shiny_explorer.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+        <article class="app-card">
+          <span class="app-tag">Genome QC</span>
+          <h3>Genome statistics explorer</h3>
+          <p>Review genome quality metrics and summary statistics in an interactive dashboard.</p>
+          <a class="card-link" href="genome_stats_explorer.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+        <article class="app-card">
+          <span class="app-tag">IMG metadata</span>
+          <h3>IMG metadata explorer</h3>
+          <p>Search, filter, and inspect IMG metadata for genome records and related project context.</p>
+          <a class="card-link" href="img_explorer.html">Open launcher <span aria-hidden="true">-&gt;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected publications</p>
+        <h2 id="publications-title">Recent and representative work</h2>
+      </div>
+      <ol class="publication-list">
+        <li>
+          <a href="https://doi.org/10.1093/ismeco/ycae085" target="_blank" rel="noopener">scMicrobe PTA: Near Complete Genomes from Single Bacterial Cells</a>
+          <span>ISME Communications, 2024</span>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1038/nbt.3893" target="_blank" rel="noopener">Minimum information about a single amplified genome and a metagenome-assembled genome</a>
+          <span>Nature Biotechnology, 2017</span>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1038/s41396-021-01178-4" target="_blank" rel="noopener">Dissecting dominant hot spring microbial populations at single-cell resolution</a>
+          <span>The ISME Journal, 2021</span>
+        </li>
+      </ol>
+      <a class="text-link" href="https://scholar.google.com/citations?user=BCw3AkMAAAAJ" target="_blank" rel="noopener">
+        View full publication list on Google Scholar <span aria-hidden="true">-&gt;</span>
+      </a>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Research, collaboration, and software questions</h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:rmbowers2010@gmail.com">rmbowers2010@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=BCw3AkMAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Robert M. Bowers</span>
+    <span>Microbial genomics, bioinformatics, and research apps</span>
+  </footer>
 </body>
 </html>

@@ -1,58 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IMG Metadata Explorer</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px;
-      background: #fafafa;
-    }
-    button {
-      font-size: 16px;
-      padding: 12px 20px;
-      margin: 10px;
-      cursor: pointer;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMG Metadata Explorer | Robert M. Bowers</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<h2>IMG Metadata Explorer</h2>
-
-<p>
-  Preferred: NERSC Spin (HTTP)<br>
-  Backup: shinyapps.io (HTTPS)
-</p>
-
-<button onclick="openNERSC()">
-  Open via NERSC (recommended)
-</button>
-
-<button onclick="openFallback()">
-  Open shinyapps.io fallback
-</button>
-
-<script>
-  function openNERSC() {
-    window.open(
-      "http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/",
-      "_blank",
-      "noopener"
-    );
-  }
-
-  function openFallback() {
-    window.open(
-      "https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/",
-      "_blank",
-      "noopener"
-    );
-  }
-</script>
-
+<body class="app-launcher-body">
+  <main class="launcher-shell">
+    <section class="launcher-panel" aria-labelledby="app-title">
+      <a class="back-link" href="index.html">Back to site</a>
+      <p class="eyebrow">Shiny app launcher</p>
+      <h1 id="app-title">IMG Metadata Explorer</h1>
+      <p class="launcher-copy">
+        Search and inspect IMG metadata for genome records and project context.
+      </p>
+      <div class="launcher-actions">
+        <a class="button button-primary" href="http://img-metadata-explorer.shiny-singlecell.development.svc.spin.nersc.org/" target="_blank" rel="noopener">
+          Open NERSC Spin <span aria-hidden="true">-&gt;</span>
+        </a>
+        <a class="button button-ghost" href="https://b46mns-robert-bowers.shinyapps.io/img_metadata_explorer_shinyio/" target="_blank" rel="noopener">
+          Open shinyapps.io <span aria-hidden="true">-&gt;</span>
+        </a>
+      </div>
+      <p class="launcher-note">Preferred host: NERSC Spin. Backup host: shinyapps.io.</p>
+    </section>
+  </main>
 </body>
 </html>
